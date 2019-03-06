@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2
-
-// Student Name: Jatinder Singh Student ID: C0725866
-// Student Name: Arshdeep Singh Student ID: C0730385
-// CSD3354 Section 2
-//March 6, 2019
+//student Name -Jatinder Singh Student ID c072586
+//Studnt Name- Arshdeep Singh student ID C0730385
+//CSD3354 section 2
+//Assignment 2
+// March 6,2019
 {
     public class program
     {
@@ -25,7 +25,7 @@ namespace ConsoleApp2
     {
         int Method1(out int i)
         {
-            System.Console.WriteLine("Method1");
+            System.Console.WriteLine("Method1" + i);
             i = 10;
             return 0;
         }
@@ -33,7 +33,7 @@ namespace ConsoleApp2
     public void Method3()
     {
         MyDelegate myDelegate = new MyDelegate(Method1);
-        MyDelegate myDelegate1 = new MyDelegate(Method1);
+        MyDelegate myDelegate1 = null;
         MyDelegate myDelegate2 = myDelegate + myDelegate1;
         int intValue;
         myDelegate2(out intValue);
@@ -45,3 +45,6 @@ namespace ConsoleApp2
 
 
 }
+
+
+
