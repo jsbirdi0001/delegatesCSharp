@@ -20,7 +20,7 @@ namespace Assignment_2
 
 
             DelegateExercises a = new DelegateExercises();
-            a.Method3();
+            a.Method2();
             Console.ReadLine();
         }
     }
@@ -29,24 +29,17 @@ namespace Assignment_2
     public class DelegateExercises
     {
 
-        public delegate int MyDelegate(int intValue);
+        public delegate int MyDelegate();
 
-        public int Method1(int intMethod1)
+        public void Method1()
         {
-            return intMethod1 * 2;
+            System.Console.WriteLine("MyDelegate");
         }
-        public int Method2(int intMethod2)
-        {
-            return intMethod2 * 10;
-        }
-        public void Method3()
+        public void Method2()
         {
             MyDelegate myDelegate = new MyDelegate(Method1);
-            int result1 = myDelegate(10);
-            System.Console.WriteLine(result1);
-            myDelegate = new MyDelegate(Method2);
-            int result2 = myDelegate(10);
-            System.Console.WriteLine(result2);
+            myDelegate();
         }
+       
     }
 }
