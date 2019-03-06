@@ -34,9 +34,8 @@ namespace Assignment_2
         }
         public void Method3()
         {
-            MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate();
-            System.Console.WriteLine(myDelegate.ToString());
+            
+            System.Console.WriteLine(MyDelegate.ToString());
         }
     }
 
