@@ -27,9 +27,9 @@ namespace Assignment_2
     public class DelegateExercises
     {
 
-        public delegate void MyDelegate();
+        public delegate void MyDelegate(int a);
 
-        void Method1()
+        void Method1(int i)
         {
             Console.WriteLine("Method1");
             Console.ReadLine();
