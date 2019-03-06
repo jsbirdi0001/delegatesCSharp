@@ -6,38 +6,27 @@ using System.Threading.Tasks;
 
 namespace Assignment_2
 {
-    
-    
-    public class program
+    using System;
+    delegate void ExampleDelegate(string xyz);
+
+    class Program
     {
-
-        static void Main()
+        public static void Method1(string xyz)
         {
-            // Student Name: Jatinder Singh  Student ID: C0725866
-            // Student Name: Arshdeep Singh Student ID: C0730385
-            // CSD3354 Section 2
-            // Assignment 2
-            // March 6, 2019
+            Console.WriteLine(xyz + "Method1");
+        }
+        public static void Method2(string xyz)
+        {
+            Console.WriteLine(xyz + "Method2");
+        }
+        public static void Main()
+        {
+            ExampleDelegate ex1Delegate, ex2Delegate, ex3Delegate, myDelegate;
 
+            ex1Delegate = new ExampleDelegate(Method1);
+            ex2Delegate = new ExampleDelegate(Method2);
+            ex3Delegate = ex1Delegate + ex2Delegate;
 
-            DelegateExercises a = new DelegateExercises();
-            a.Method3();
-            Console.ReadLine();
         }
     }
-    public delegate void MyDelegate();
-    public class DelegateExercises
-    {
-        void Method1()
-        {
-            System.Console.WriteLine("Method1");
-        }
-        public void Method3()
-        {
-            
-            System.Console.WriteLine(MyDelegate.ToString());
-        }
-    }
-
-
 }
