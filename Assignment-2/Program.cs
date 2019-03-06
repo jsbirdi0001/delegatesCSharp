@@ -16,30 +16,27 @@ namespace ConsoleApp2
         public static void Main()
         {
             DelegateExercises delegateExercises = new DelegateExercises();
-            try
-            {
-                delegateExercises.Method3();
-                Console.ReadLine();
-            }
-            catch (System.Exception ex)
-            {
-                System.Console.WriteLine("Exception Occured.");
-                Console.ReadLine();
-            }
+
+            delegateExercises.Method3();
+            Console.ReadLine();
         }
     }
-    public delegate int MyDelegate();
+    public delegate int MyDelegate(ref int intValue);
     public class DelegateExercises
     {
-        void Method1()
+        int Method1(ref int intvalue)
         {
-            throw new System.Exception();
+            int value = intvalue + 5
+                System.Console.WriteLine("Method1" + intValue);
         }
     }
     public void Method3()
     {
         MyDelegate myDelegate = new MyDelegate(Method1);
-        myDelegate2();
+        MyDelegate myDelegate = new MyDelegate(Method1);
+        MyDelegate myDelegate2 = myDelegate + myDelegate1;
+        int intParameter = 5; ;
+        myDelegate2(ref intParmeter);
     }
 
 
@@ -48,4 +45,5 @@ namespace ConsoleApp2
 
 
 }
+
 
