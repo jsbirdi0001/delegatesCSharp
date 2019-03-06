@@ -29,7 +29,7 @@ namespace Assignment_2
     public class DelegateExercises
     {
 
-        public delegate int MyDelegate();
+        public delegate int MyDelegate(); 
 
         public void Method1()
         {
