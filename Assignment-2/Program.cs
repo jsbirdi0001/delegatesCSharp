@@ -26,6 +26,15 @@ namespace Assignment_2
             ex1Delegate = new ExampleDelegate(Method1);
             ex2Delegate = new ExampleDelegate(Method2);
             ex3Delegate = ex1Delegate + ex2Delegate;
+            ex1Delegate("AAA");
+            ex2Delegate("BBB");
+            ex3Delegate("CCC");
+            myDelegate("DDD");
+            myDelegate = ex3Delegate - ex1Delegate;
+            myDelegate("EEE");
+            myDelegate = ex3Delegate - ex2Delegate;
+            myDelegate("FFF");
+            Console.ReadLine();
 
         }
     }
