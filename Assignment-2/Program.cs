@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2
-//student Name -Jatinder Singh Student ID c072586
+//student Name -Jatinder Singh Student ID C0725866
 //Studnt Name- Arshdeep Singh student ID C0730385
 //CSD3354 section 2
 //Assignment 2
@@ -16,27 +16,30 @@ namespace ConsoleApp2
         public static void Main()
         {
             DelegateExercises delegateExercises = new DelegateExercises();
-            delegateExercises.Method3();
-            Console.ReadLine();
+            try
+            {
+                delegateExercises.Method3();
+                Console.ReadLine();
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine("Exception Occured.");
+                Console.ReadLine();
+            }
         }
     }
-    public delegate int MyDelegate(out int i);
+    public delegate int MyDelegate();
     public class DelegateExercises
     {
-        int Method1(out int i)
+        void Method1()
         {
-            System.Console.WriteLine("Method1" + i);
-            i = 10;
-            return 0;
+            throw new System.Exception();
         }
     }
     public void Method3()
     {
         MyDelegate myDelegate = new MyDelegate(Method1);
-        MyDelegate myDelegate1 = null;
-        MyDelegate myDelegate2 = myDelegate + myDelegate1;
-        int intValue;
-        myDelegate2(out intValue);
+        myDelegate2();
     }
 
 
@@ -45,6 +48,4 @@ namespace ConsoleApp2
 
 
 }
-
-
 
